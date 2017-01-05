@@ -1,10 +1,5 @@
-var express = require('express');
-var app = express();
-
-//set up the first route
-app.get('/produtos', function(req,res){
-  res.send("<html><body><h1>Listagem de produtos</h1></body></html>")
-});
+var app = require('./config/express')();
+var rotasProdutos = require('./app/routes/produtos')(app);
 
 app.listen(3000,function(){
   console.log("servidor rodando");
