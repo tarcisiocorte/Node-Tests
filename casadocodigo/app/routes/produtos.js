@@ -1,19 +1,19 @@
 module.exports = function(app){
     app.get('/produtos',function(req,res){
         var connection = app.infra.connectionFactory();
-        var produtosBanco = new app.infra.ProdutosDAO(connection);
-        produtosBanco.lista(function(erros,resultados){
+        var ProdutosDAO = new app.infra.ProdutosDAO(connection);
+        produtosDAO.lista(function(erros,resultados){
             res.render('produtos/lista',{lista:resultados});
             });
         connection.end();
     });
 
-    app.get('produtos/remove',function(){
-        var connection = app.infra.connectionFactory();
-        var produtosBanco = app.infra.ProdutosDAO(connection);
-        var produto = produtosBanco.carrega(id,callback);
-        if(produto){
-            produtosBanco.remove(produto,callback);
-        }
+    app.get('/produtos/form', function(req, res){
+        res.render('produtos/form');        
+    });
+
+    app.post('/produtos/salva', function(req, res){
+        var produto = req.body;
+        console.log(produto);
     });
 }
