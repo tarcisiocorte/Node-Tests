@@ -19,7 +19,7 @@ var client = http.request(configuracoes, function(res){
 });
 
 var produto = {
-  titulo: 'mais um sobre node',
+  titulo: 'Ok, vou fazer um titulo',
   descricao: 'esse é outro livro de node',
   preco: 100
 }
