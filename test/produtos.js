@@ -1,7 +1,6 @@
 var express = require('../config/express')();
 var request = require('supertest')(express);
 
-// rodar teste integrado...
 describe('#ProdutosController', function(){
     beforeEach(function(done){
       var conn = express.infra.connectionFactory();
