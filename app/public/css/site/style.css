@@ -125,7 +125,6 @@ h3,h1{
 #logo img {
   display: block;
   height: 66px;
-  padding: 11px 0;
 }
 
 #header-content {
@@ -303,7 +302,6 @@ h3,h1{
   float: left;
   margin-left: 35px;
   padding-top: 7px;
-  height: 100%;
 }
 
 #main-nav ul li a{
@@ -588,7 +586,7 @@ h3,h1{
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f4994a', endColorstr='#ef7000',GradientType=0 ); /* IE6-9 */
 
     background-position: 0 0;
-    background-repeat: no-repeat; 
+    background-repeat: no-repeat;
     font-family: "Droid Sans", Sans-serif;
     font-weight: 100;
 }

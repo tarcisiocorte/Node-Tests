@@ -1,10 +1,9 @@
 module.exports = function(app) {
-    app.get("/",function(req, res) {
-        var connection = new app.infra.connectionFactory();
+    app.get('/', function(req, res) {
+        var connection = app.infra.connectionFactory();
         var produtosDAO = new app.infra.ProdutosDAO(connection);
-
-        produtosDAO.lista(function(error, results, fields){
-            res.render('home/index',{livros:results});
+        produtosDAO.lista(function(erros, resultados) {
+            res.render('home/index',{livros:resultados});
         });
         connection.end();
     });
